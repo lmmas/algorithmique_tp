@@ -1,0 +1,7 @@
+# ninja log v6
+909	968	1728853054078148865	algo2	4a03c8060acf518b
+4	37	1728853880384432460	build.ninja	59cb0ebda532342
+7	948	1728853897296389638	CMakeFiles/algorithmique_tp.dir/main.cpp.o	59a77e14b34acf43
+9	1145	1728853897299389631	CMakeFiles/algorithmique_tp.dir/exercice2.cpp.o	3486d382bf8565e2
+7	1221	1728853897296389638	CMakeFiles/algorithmique_tp.dir/exercice1.cpp.o	e1a28ac936c46c79
+1221	1425	1728853898510386558	algorithmique_tp	6cee39645ea8e5ff
