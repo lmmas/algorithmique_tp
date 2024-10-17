@@ -87,13 +87,27 @@ void exercice2() {
     int divisor = sequenceInfo.second;
     auto subSeq = getSubSeq2(seq2, divisor);
     int sum = 0;
-    cout << "subsequence size: " << subSeq.size() << endl;
-    cout << "subsequence: " << endl;
+    //cout << "subsequence size: " << subSeq.size() << endl;
+    //cout << "subsequence: " << endl;
     for (int i:subSeq) {
         sum += i;
         cout << i << endl;
     }
-    cout << "sum: " << sum << endl;
+    //cout << "sum: " << sum << endl;
+    output2(subSeq);
+}
+
+
+void output2(const vector<int>& tab) {
+    ofstream myFile("../OUTDIVSEQ.txt");
+    myFile << tab.size() << endl;
+    int sum = 0;
+    for (int i = 0; i < tab.size(); i++) {
+        myFile << "a[" << i+1 << "] = " << tab.at(i) << endl;
+        sum += tab.at(i);
+    }
+    myFile << "sum: " << sum << endl;
+    myFile.close();
 }
 
 vector<int> tryToSumRec(const int divisor, const int targetRemainder, const int numberOfTerms, int startingRemainder, int remainderCounts[]) {
