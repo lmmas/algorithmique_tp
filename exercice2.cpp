@@ -14,7 +14,7 @@ pair<vector<int>,int> getSeq2() {
         getline(myText, line);
         string sizeStr = strtok(line.data(), " ");
         size = stoi(sizeStr);
-        string divisorStr = strtok(NULL, " ");
+        string divisorStr = strtok(nullptr, " ");
         divisor = stoi(divisorStr);
         getline(myText, line);
         string numberStr = strtok(line.data(), " ");
@@ -22,7 +22,7 @@ pair<vector<int>,int> getSeq2() {
         //cout << number << endl;
         tab.push_back(number);
         for (int i = 0; i < size - 1; i++) {
-            numberStr = strtok(NULL, " ");
+            numberStr = strtok(nullptr, " ");
             number = stoi(numberStr);
             //cout << number << endl;
             tab.push_back(number);
@@ -31,6 +31,7 @@ pair<vector<int>,int> getSeq2() {
     }
     else {
         cout << "Error opening file" << endl;
+        return make_pair(tab,0);
     }
 }
 
@@ -52,11 +53,6 @@ vector<int> getSubSeq2(vector<int> inputSequence, int divisor) {
             remainderCounts[remainder - 1]++;
         }
     }
-    cout << "remainders in the sequence: ";
-    for(int i = 0; i < divisor - 1; i++) {
-        cout << remainderCounts[i] << ", ";
-    }
-    cout << endl;
     int toExclude = 1;
     vector<int> remaindersToExclude;
     while(remaindersToExclude.empty() && toExclude < divisor + 1) {
