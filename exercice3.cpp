@@ -51,9 +51,9 @@ vector<deque<int>> vertexNeighborList(const vector<pair<int,int>>& tab) {
 
 }
 
-vector<pair<int,int>> getSpanningTree(vector<pair<int,int>> inputGraph) {
+vector<pair<int,int>> getSpanningTreeList(vector<pair<int,int>> inputGraph) {
     const auto neighborList = vertexNeighborList(inputGraph);
-    auto edgesToRemove = getEdgesToRemove(neighborList);
+    auto edgesToRemove = getEdgesToRemoveList(neighborList);
     for(const auto& edge: edgesToRemove) {
         auto toRemove = find(inputGraph.begin(), inputGraph.end(), edge);
         if(toRemove != inputGraph.end()) {
@@ -67,7 +67,7 @@ vector<pair<int,int>> getSpanningTree(vector<pair<int,int>> inputGraph) {
     return inputGraph;
 }
 
-vector<pair<int,int>> getEdgesToRemove(const vector<deque<int>>& neighborList) {
+vector<pair<int,int>> getEdgesToRemoveList(const vector<deque<int>>& neighborList) {
     vector<pair<int,int>> outputList;
     for (int i=2; i < neighborList.size(); i++) {
         int neighborCount  = 0;
@@ -107,10 +107,11 @@ void output3(const vector<pair<int,int>>& tab) {
     myFile.close();
 }
 
+
 void exercice3(){
     vector<pair<int,int>> graph = getArbGraph3();
     //displayGraph(graph);
-    auto spanningTree = getSpanningTree(graph);
+    auto spanningTree = getSpanningTreeList(graph);
     displayGraph(spanningTree);
     output3(spanningTree);
 }
