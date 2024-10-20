@@ -21,7 +21,7 @@ vector<pair<int,int>> getArbGraph3();
 void displayGraph(const vector<pair<int,int>>&);
 void displayNeighborList(const vector<vector<int>>& tab);
 vector<deque<int>> vertexNeighborList(const vector<pair<int,int>>& tab);
-vector<pair<int,int>> getEdgesToRemove(const vector<deque<int>>& neighborList);
+vector<pair<int,int>> getEdgesToRemoveList(const vector<deque<int>>& neighborList);
 void output3(const vector<pair<int,int>>& tab);
 void exercice3();
 
