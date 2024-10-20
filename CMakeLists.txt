@@ -7,4 +7,8 @@ add_executable(algorithmique_tp main.cpp
         exercice1.h
         exercice1.cpp
         exercice2.h
-        exercice2.cpp)
+        exercice2.cpp
+        exercice3.cpp
+        exercice3.h
+        exercice4.h
+        exercice4.cpp)
