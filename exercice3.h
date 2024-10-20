@@ -19,9 +19,20 @@ using namespace std;
 vector<pair<int,int>> getArbGraph3();
 
 void displayGraph(const vector<pair<int,int>>&);
-void displayNeighborList(const vector<vector<int>>& tab);
-vector<deque<int>> vertexNeighborList(const vector<pair<int,int>>& tab);
+
+void displayAdjacenceList(const vector<vector<int>>& tab);
+void displayAdjacenceMatrix(const vector<vector<int> > &tab);
+
+vector<deque<int>> adjacenceList(const vector<pair<int,int>>& tab);
+vector<vector<int>> adjacenceMatrix(const vector<pair<int,int>>&tab);
+
+vector<pair<int,int>> getSpanningTreeList(vector<pair<int,int>> inputGraph);
+vector<pair<int,int>> getSpanningTreeMatrix(vector<pair<int,int>> inputGraph);
+
 vector<pair<int,int>> getEdgesToRemoveList(const vector<deque<int>>& neighborList);
+vector<pair<int,int>> getEdgesToRemoveMatrix(const vector<vector<int>>& neighborMatrix);
+
+
 void output3(const vector<pair<int,int>>& tab);
 void exercice3();
 
